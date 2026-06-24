@@ -1,0 +1,22 @@
+# Virtual Environment
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# PyCharm
+.idea/
+
+# Environment
+.env
+
+# SQLite
+*.db
+
+# Archives
+*.zip
+
+# Logs
+*.log
