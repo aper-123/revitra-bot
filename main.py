@@ -1,19 +1,16 @@
 import asyncio
 import logging
 
-from app.loader import bot, dp
 from app.database import create_tables
-
-from app.handlers.start import router as start_router
 from app.handlers.booking import router as booking_router
 from app.handlers.contacts import router as contacts_router
 from app.handlers.my_bookings import router as bookings_router
+from app.handlers.start import router as start_router
+from app.loader import bot, dp
 
 
 async def main():
     logging.basicConfig(level=logging.INFO)
-
-    # Создаем базу данных и таблицы
     create_tables()
 
     dp.include_router(start_router)
